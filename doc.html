@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://softwarebrothers.co/blog/javascript-code-documentation/ -->
+<html lang="en" class="sr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Javascript Code Documentation - My Approach to Documenting Project</title>
+  <meta name="description" content="6 concepts of JavaScript Project Documentation ✓ Interesting solution, which can be applied to almost any mid-size JavaScript application ✓ Read now!">
+  <link rel="stylesheet" type="text/css" href="./doc_files/application.min.css">
+  <link rel="stylesheet" href="./doc_files/pvb4vmv.css">
+  <link rel="stylesheet" href="./doc_files/css">
+  <link rel="stylesheet" href="./doc_files/css(1)">
+  <link rel="stylesheet" type="text/css" href="./doc_files/cookieconsent.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" async="" src="./doc_files/yddb2og3"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script type="text/javascript" async="" src="./doc_files/f.txt"></script><script src="./doc_files/369943483851449" async=""></script><script async="" src="./doc_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./doc_files/analytics.js.download"></script><script type="text/javascript" async="" src="./doc_files/yddb2og3"></script><script async="" src="./doc_files/gtm.js.download"></script><script src="./doc_files/jquery-3.1.1.min.js.download"></script>
+  <script src="./doc_files/cookieconsent.min.js.download"></script>
+  <script src="./doc_files/vendor.min.js.download"></script>
+  <script src="./doc_files/application.min.js.download"></script>
+  <script type="text/javascript" src="./doc_files/prism.js.download"></script>
+  <link rel="stylesheet" href="./doc_files/prism.css">
+
+  <meta name="description" content="6 concepts of JavaScript Project Documentation ✓ Interesting solution, which can be applied to almost any mid-size JavaScript application ✓ Read now!">
+    <link rel="shortcut icon" href="https://softwarebrothers.co/blog/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://softwarebrothers.co/blog/javascript-code-documentation/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Blog - Software Brothers">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Javascript Code Documentation - My Approach to Documenting Project">
+    <meta property="og:description" content="In this short article, I will share with you my recent experience with documenting JavaScript code.">
+    <meta property="og:url" content="https://softwarebrothers.co/blog/javascript-code-documentation/">
+    <meta property="og:image" content="http://softwarebrothers.co/blog/content/images/2019/03/docs.png">
+    <meta property="article:published_time" content="2019-03-19T14:11:39.000Z">
+    <meta property="article:modified_time" content="2019-08-09T07:48:40.000Z">
+    <meta property="article:tag" content="documentation">
+    <meta property="article:tag" content="jsdoc">
+    <meta property="article:tag" content="nodejs">
+    <meta property="article:tag" content="development">
+    <meta property="article:tag" content="mvp">
+    <meta property="article:tag" content="technology">
+    <meta property="article:tag" content="javascript">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/softwarebrothers/">
+    <meta property="article:author" content="https://www.facebook.com/wojciech.g.krysiak">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Javascript Code Documentation - My Approach to Documenting Project">
+    <meta name="twitter:description" content="In this short article, I will share with you my recent experience with documenting JavaScript code.">
+    <meta name="twitter:url" content="https://softwarebrothers.co/blog/javascript-code-documentation/">
+    <meta name="twitter:image" content="http://softwarebrothers.co/blog/content/images/2019/03/docs.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Wojciech Krysiak">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="documentation, jsdoc, nodejs, development, mvp, technology, javascript">
+    <meta name="twitter:site" content="@SoftwareBros">
+    <meta name="twitter:creator" content="@wojtek_krysiak">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="640">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Blog - Software Brothers",
+        "logo": "https://casper.ghost.org/v1.0.0/images/ghost-logo.svg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Wojciech Krysiak",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://softwarebrothers.co/blog/content/images/2018/11/Zrzut-ekranu-2018-11-14-o-16.06.44.png",
+            "width": 335,
+            "height": 349
+        },
+        "url": "http://softwarebrothers.co/blog/author/wojciech-krysiak/",
+        "sameAs": [
+            "https://www.facebook.com/wojciech.g.krysiak",
+            "https://twitter.com/wojtek_krysiak"
+        ]
+    },
+    "headline": "Javascript Code Documentation - My Approach to Documenting Project",
+    "url": "http://softwarebrothers.co/blog/javascript-code-documentation/",
+    "datePublished": "2019-03-19T14:11:39.000Z",
+    "dateModified": "2019-08-09T07:48:40.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://softwarebrothers.co/blog/content/images/2019/03/docs.png",
+        "width": 1920,
+        "height": 640
+    },
+    "keywords": "documentation, jsdoc, nodejs, development, mvp, technology, javascript",
+    "description": "In this short article, I will share with you my recent experience with documenting JavaScript code.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://softwarebrothers.co/blog/"
+    }
+}
+    </script>
+
+    <script src="./doc_files/ghost-sdk.min.js.download"></script>
+<script>
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "9b59ac6fb9d0"
+});
+</script>
+    <meta name="generator" content="Ghost 2.1">
+    <link rel="alternate" type="application/rss+xml" title="Blog - Software Brothers" href="http://softwarebrothers.co/blog/rss/">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJK7VG8');</script>
+<!-- End Google Tag Manager -->
+    <link rel="canonical" href="https://softwarebrothers.co/blog/javascript-code-documentation/">
+
+  
+
+  <link rel="shortcut icon" href="https://softwarebrothers.co/assets/images/favicon.ico?v=1598821200">
+<script src="./doc_files/embed.js.download" data-timestamp="1598821844868"></script><script async="" src="./doc_files/hotjar-1054358.js.download"></script><script async="" src="./doc_files/modules.650467f8f8ec9593c386.js.download" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.6525595c7a9874fa10bd041275e40f17.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.e07f4f02bedd02259fb3f3e092970560.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.f08ab706542f4d9b2998c2ce6f1a5173.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"><script src="./doc_files/f(1).txt"></script><script src="./doc_files/f(2).txt"></script><script src="./doc_files/f(3).txt"></script><script src="./doc_files/f(4).txt"></script><script src="./doc_files/f(5).txt"></script><script src="./doc_files/f(6).txt"></script><script src="./doc_files/f(7).txt"></script></head>
+
+<body class="post-template tag-documentation tag-jsdoc tag-nodejs tag-development tag-mvp tag-technology tag-javascript webp" style="height: 100%;"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-edgeless cc-bottom " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">This website uses cookies for analytics and to improve provided services. By choosing I Accept, you consent to our use of them and other tracking technologies according to our <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://softwarebrothers.co/terms-of-use" rel="noopener noreferrer nofollow" target="_blank">Privacy Policy.</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">I accept</a></div><!--googleon: all--></div>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJK7VG8" height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <div class="topbar topbar-scrolled-background-white with-blog-category-bar topbar-scrolled-logoCompact-red topbar-scrolled-button-red topbar-scrolled-hamburger-dark topbar-scrolled-text-dark topbar-unscrolled-background-white topbar-unscrolled-logoCompact-red topbar-unscrolled-button-red topbar-unscrolled-hamburger-dark topbar-unscrolled-text-dark" id="topbar">
+    <div class="logo logo-full">
+        <a href="https://softwarebrothers.co/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="310" height="133" viewBox="0 0 310 133">
+                <g fill="none" fill-rule="evenodd">
+                    <path fill="#E6282B" d="M300.317 103.066c-.932-1.923-2.955-3.252-5.303-3.498-79.728-8.325-142.837-1.119-186.026 8.171-4.964 1.067-8.001 6.242-6.318 11.032.189.541.426 1.094.715 1.658.922 1.799 3.04 2.623 4.976 2.041 64.349-19.354 137.797-19.377 190.004-15.631 1.777.128 3.069-1.467 2.366-2.918l-.414-.855z"></path>
+                    <path fill="#E6282B" d="M140.17 61.965c-.062.2-.191.406-.388.62-1.637 1.72-3.068 3.952-4.293 6.696-1.223 2.744-1.862 5.218-1.928 7.413.006.257-.052.49-.178.697-3.701 6.672-6.863 10.186-9.602 10.531-1.693.215-2.555-.834-2.59-3.151.013-2.838.952-6.653 2.857-11.433 1.906-4.78 4.258-9.124 7.06-13.021 2.802-3.898 5.305-5.96 7.464-6.191 1.417-.152 2.148.77 2.19 2.758.044 1.925-.155 3.62-.591 5.08m85.324 1.125c2.337-4.148 4.92-7.75 7.747-10.8 2.826-3.049 5.044-4.575 6.619-4.587.684-.006.997.407.934 1.24-.161 2.176-1.97 5.242-5.361 9.218-3.394 3.979-6.41 6.002-9.101 6.06-.741.017-1.1-.166-1.075-.55.012-.194.09-.388.237-.581M308.7 44.236c-.523-.647-1.262-1.325-2.306-1.923-2.44-1.398-4.628-1.784-7.67-.97a7.211 7.211 0 0 0-2.105 1.133c-2.57 1.672-7.33 7.532-10.606 11.677-.003 0-6.252 8.511-10.511 14.248-1.316 1.773-2.552 3.269-3.217 4.145-.292.383-2.944 3.551-3.294 3.93-1.227 1.33-2.343 2.34-3.353 3.03-1.011.692-1.88 1.044-2.612 1.06-.665.014-.974-.337-.93-1.056.058-.915.636-2.446 1.747-4.588a50.492 50.492 0 0 1 3.644-6.01c1.322-1.863 2.92-4.107 4.81-6.726 1.888-2.618 3.08-4.252 3.557-4.907 1.39-1.524 2.145-2.979 2.25-4.368.15-1.955-.804-3.578-2.872-4.86-2.071-1.28-4.895-2.444-8.474-3.473-.273-.059-.401-.186-.39-.378.005-.063.08-.159.227-.29 1.824-2.654 2.805-4.843 2.92-6.572.12-1.793-.758-2.68-2.636-2.648-2.018.034-4.111 1.019-6.265 2.955-2.157 1.936-3.301 4.288-3.455 7.043-.053.962.059 1.76.337 2.392.054.122.14.223.214.33a838.573 838.573 0 0 1-8.918 13.484 148.63 148.63 0 0 1-7.582 9.348c-2.931 3.283-5.935 5.908-9.02 7.879-3.088 1.969-5.677 2.985-7.794 3.035-2.713.067-3.974-1.526-3.79-4.796.113-1.984.749-4.436 1.92-7.346.082-.257.256-.39.526-.396 1.256.224 2.22.33 2.89.315 4.688-.106 9.333-2.112 14.01-6.023 4.675-3.907 7.23-8.012 7.585-12.365.147-1.791-.285-3.422-1.3-4.894-1.014-1.468-2.305-2.568-3.866-3.295-1.561-.724-3.137-1.08-4.721-1.065-3.65.04-7.647 2.1-11.922 6.195-4.278 4.094-7.791 8.886-10.556 14.353-.208.412-.396.814-.59 1.22l-.135.196c-.977 1.41-1.897 2.738-2.758 3.985a151.56 151.56 0 0 1-2.835 3.948 210.593 210.593 0 0 1-2.858 3.766 87.465 87.465 0 0 1-2.511 3.086c-.797.933-1.518 1.653-2.165 2.164-.646.512-1.133.776-1.462.792-.595.029-.88-.277-.858-.92.058-1.537 1.667-5.368 4.91-11.466 3.248-6.1 6.522-11.475 9.803-16.133.949-1.375 1.445-2.414 1.48-3.12a6.856 6.856 0 0 0-.424-2.771 7.866 7.866 0 0 0-1.371-2.355 6.919 6.919 0 0 0-2.08-1.657c-.801-.417-1.616-.612-2.44-.581-1.298.05-3.33 1.22-6.07 3.517-2.74 2.299-5.67 5.194-8.771 8.689a154.17 154.17 0 0 0-9.08 11.29c-.205.206-.406.314-.606.328-.267.017-.398-.093-.393-.332 0-.061.035-.123.104-.186a624.909 624.909 0 0 1 12.254-23.235 368.029 368.029 0 0 1 3.549-6.267 4.297 4.297 0 0 0-1.186-5.633l-1.948-1.419a3.284 3.284 0 0 0-4.858 1.154 1327.164 1327.164 0 0 0-12.401 24.818 918.07 918.07 0 0 0-2.773 5.757 381.833 381.833 0 0 1-5.647 8.824c-2.392 3.615-4.87 6.927-7.443 9.938-2.571 3.011-4.53 4.584-5.907 4.71-.983.09-1.48-.474-1.488-1.697-.01-1.352.588-3.742 1.81-7.17 1.225-3.426 2.786-7.188 4.7-11.277a225.472 225.472 0 0 1 6.216-12.282c.136-.209.376-.327.717-.353 2.254-.236 3.79-.412 4.606-.535 1.632-.311 3.047-.938 4.25-1.886 1.2-.948 1.813-1.837 1.827-2.672.012-.704-.528-1.118-1.617-1.237-.683-.018-2.388 0-5.115.069-.342.025-.51-.105-.508-.389 0-.07.035-.18.105-.326.446-.727.87-1.412 1.272-2.053a4.295 4.295 0 0 0-1.118-5.75l-1.47-1.07a3.283 3.283 0 0 0-4.763.986 394.762 394.762 0 0 0-5.04 8.846c-.133.385-.33.587-.596.61-2.855.305-4.88.646-6.07 1.009-.728.257-1.09.736-1.082 1.438.005.637.343 1.307 1.012 2.011.668.706 1.432 1.148 2.295 1.326.332.036.5.15.5.339a.411.411 0 0 1-.1.295 1171.435 1171.435 0 0 0-7.846 13.974c-.446.808-.87 1.567-1.281 2.305-.451.61-.931 1.24-1.47 1.919-1.501 1.885-2.903 3.155-4.214 3.807l-.2.021c-.264.029-.366-.09-.304-.352-.001-.065.029-.133.094-.205 2.602-5.803 3.905-10.753 3.836-14.862-.05-3.015-.825-5.06-2.335-6.13-.206-.172-.345-.35-.416-.535-1.832-3.8-4.735-5.496-8.674-5.064-2.92.32-5.956 1.956-9.07 4.904-3.115 2.948-5.744 6.404-7.887 10.355a67.842 67.842 0 0 0-4.035 8.925 1250.725 1250.725 0 0 0-4.32 7.818 41.13 41.13 0 0 1-2.72 4.267 1169.313 1169.313 0 0 0-2.703 3.772c-.75 1.053-1.528 1.928-2.336 2.63-.81.701-1.504 1.096-2.087 1.184-.648.097-1.002-.302-1.06-1.206-.075-1.147.395-2.782 1.419-4.906 1.023-2.124 2.01-4.157 2.959-6.103.947-1.944 2.124-4.344 3.54-7.197 1.416-2.852 2.309-4.63 2.662-5.337 1.227-1.644 1.812-3.137 1.744-4.482-.102-1.986-1.256-3.495-3.475-4.513-2.218-1.017-5.11-1.823-8.672-2.403-.48-.059-.593-.268-.344-.629 1.515-2.871 2.233-5.17 2.129-6.9-.108-1.794-1.08-2.563-2.912-2.295-1.221.178-2.487.754-3.79 1.724-1.304.971-2.423 2.323-3.358 4.053-.936 1.73-1.333 3.525-1.2 5.38.069.96.328 1.73.775 2.307a.72.72 0 0 1 .124.321.805.805 0 0 1-.076.352c-1.537 3.684-3.184 6.639-5.645 11.588a1.617 1.617 0 0 0 1.059 2.29l.224.055a3.502 3.502 0 0 0 4.053-2.017c2.143-4.974 3.028-7.534 4.366-10.402.175-.416.395-.642.663-.684a14.03 14.03 0 0 1 2.015-.155c.675-.004 1.377.151 2.106.465.728.314 1.11.791 1.15 1.431.06.961-.591 2.745-1.935 5.352-1.345 2.61-2.74 5.34-4.183 8.194-1.443 2.853-2.732 5.928-3.867 9.222-1.136 3.294-1.615 5.969-1.462 8.02a9.304 9.304 0 0 0 .71 2.945 8.676 8.676 0 0 0 1.553 2.472 5.84 5.84 0 0 0 2.307 1.574c.902.342 1.865.433 2.893.273 1.697-.264 3.503-1.279 5.43-3.047 1.928-1.767 4.153-4.463 6.703-8.085a170.152 170.152 0 0 0 2.69-3.936c.004.251-.018.526-.006.77.185 3.528 1.344 6.27 3.46 8.242 2.116 1.971 4.522 2.778 7.235 2.428 2.713-.35 5.463-1.805 8.278-4.365 2.814-2.56 5.452-5.774 7.92-9.652.127-.208.387-.334.78-.377 2.54-.278 5.045-1.575 7.54-3.855.426-.091.852-.206 1.278-.352.064-.07.13-.11.196-.118.198-.02.298.035.3.163 0 .066-.032.164-.095.3-.622 2.569-.915 4.624-.891 6.165.046 2.825.75 4.986 2.11 6.489 1.356 1.502 3.07 2.151 5.15 1.954 1.887-.18 4.04-1.344 6.483-3.486 1.926-1.689 3.68-3.6 5.343-5.633-.062.158-.13.326-.186.473-.2.66-.3 1.31-.3 1.951-.004 1.541.58 2.825 1.75 3.85 1.172 1.029 2.372 1.494 3.612 1.397 1.04-.082 1.666-.578 1.87-1.492 3.325-6.025 7.984-12.984 14.102-20.822 6.119-7.836 11.39-13.685 15.682-17.59.21-.202.383-.305.52-.31.204-.01.303.082.295.274-.005.13-.043.227-.113.294-2.378 3.562-3.981 6.041-4.838 7.428-.856 1.386-2.25 3.761-4.16 7.13-1.91 3.367-3.268 6.265-4.095 8.682-.827 2.42-1.261 4.56-1.31 6.42-.07 2.76.566 4.869 1.899 6.329 1.334 1.46 2.814 2.145 4.45 2.057 3.639-.19 8.607-4.81 15.183-13.727-.016.216-.044.438-.054.65-.174 3.72.76 6.676 2.786 8.875 2.025 2.201 4.668 3.248 7.953 3.16 4.202-.115 8.458-1.85 12.824-5.209 4.366-3.356 8.348-7.397 11.952-12.14 2.449-3.142 4.317-5.662 5.597-7.57 2.459-3.358 5.728-8.206 9.885-14.258.185.016.352.024.49.028 1.165.032 2.32.13 3.463.462 1.143.331 1.682.982 1.618 1.945-.063.965-.95 2.66-2.643 5.092a1099.176 1099.176 0 0 0-5.244 7.599c-1.803 2.633-3.505 5.511-5.11 8.63-1.604 3.121-2.455 5.775-2.57 7.955-.072 1.41.14 2.716.638 3.915a6.867 6.867 0 0 0 2.313 2.953c1.044.77 2.257 1.133 3.642 1.097 1.772-.046 3.752-.796 5.952-2.252 2.199-1.457 4.375-3.37 6.53-5.742.192-.21 6.714-8.188 7.953-10.043 1.224-1.743 8.442-11.965 13.298-17.844a64.938 64.938 0 0 0-.103 2.907c-.043 3.322 1.1 13.634.67 19.595-.427 5.964-4.82 9.358-10.367 9.085-3.1-.154-4.99-1.77-6.054-3.168-.868-1.14-2.75-.704-2.89.722-.048.501.075 1.02.378 1.465 4.68 6.884 12.634 6.556 12.634 6.556s8.85-.226 13.386-6.406c4.535-6.18 2.495-19.55 2.32-26.957-.117-5.005 3.523-7.741 5.899-8.991a2.318 2.318 0 0 0 .74-3.524"></path>
+                    <path fill="#211D1A" d="M119.314 23.385a3.003 3.003 0 0 1-1.179.38c-.597.066-1.274.01-2.033-.173-.758-.182-1.57-.51-2.437-.986l-.11 2.71a8.972 8.972 0 0 0 4.917.831c1.035-.116 1.93-.42 2.681-.915.751-.496 1.305-1.132 1.661-1.909a4.622 4.622 0 0 0 .39-2.48c-.072-.639-.242-1.19-.51-1.662a5.447 5.447 0 0 0-.987-1.25 7.941 7.941 0 0 0-1.263-.966 36.91 36.91 0 0 0-1.352-.793c-.713-.389-1.23-.704-1.55-.946a3.702 3.702 0 0 1-.753-.727 1.642 1.642 0 0 1-.32-.804c-.073-.653.114-1.21.56-1.67.442-.462 1.062-.737 1.858-.826a5.821 5.821 0 0 1 1.808.096c.631.127 1.23.341 1.795.64l.133-2.615a8.586 8.586 0 0 0-1.924-.486 7.98 7.98 0 0 0-2.03-.04 6.47 6.47 0 0 0-2.762.941c-.82.515-1.435 1.164-1.845 1.947a4.258 4.258 0 0 0-.464 2.502c.07.63.244 1.183.53 1.665.284.48.65.92 1.102 1.322.451.4 1.18.883 2.187 1.45.362.208.712.414 1.048.615.337.2.641.412.911.635.272.224.494.465.668.724.172.26.28.556.317.89.046.406-.028.773-.222 1.102a2.214 2.214 0 0 1-.825.798M139.1 12.876c.451-1.229 1.092-2.2 1.925-2.913.83-.71 1.768-1.113 2.815-1.205.828-.07 1.58.06 2.246.396.67.336 1.204.845 1.607 1.526.401.68.64 1.48.721 2.398a9.077 9.077 0 0 1-.46 3.83c-.428 1.21-1.06 2.184-1.902 2.922-.84.736-1.78 1.15-2.817 1.24-.838.073-1.594-.058-2.266-.393-.675-.336-1.217-.85-1.632-1.547-.413-.696-.664-1.523-.747-2.48a8.653 8.653 0 0 1 .51-3.774m-2.175 7.641a6.522 6.522 0 0 0 2.763 2.42c1.143.535 2.391.743 3.74.627a8.237 8.237 0 0 0 4.344-1.664c1.274-.968 2.226-2.239 2.851-3.815.628-1.574.862-3.296.7-5.165-.123-1.396-.52-2.627-1.192-3.69a6.255 6.255 0 0 0-2.689-2.378c-1.118-.522-2.353-.724-3.702-.607a8.333 8.333 0 0 0-3.424 1.053 8.495 8.495 0 0 0-2.67 2.387 10.067 10.067 0 0 0-1.608 3.35 10.634 10.634 0 0 0-.34 3.77c.12 1.397.53 2.634 1.227 3.712M167.757 13.994l5.313-.36.153-2.384-5.278.358.32-4.71 5.949-.402.15-2.384-8.718.592-1.262 16.916 2.817-.191zM190.786 20.038l2.869-.149 1.276-14.46 5.042-.26.223-2.433-12.904.67-.226 2.428 4.996-.257zM216.789 19.012l5.23-11.74 3.456 11.455 1.13-.037 7.612-17.22-2.896.095-4.772 11.413-.072.003-3.398-11.145-1.188.04-4.967 11.3h-.05l-2.71-11.047-2.798.092 4.27 16.83zM251.346 4.234h.06l1.213 7.121-4.062.063 2.79-7.183zm-3.623 9.24l5.24-.08.862 4.543 2.78-.042-3.386-16.887-2.872.044-7.507 17.053 3.006-.047 1.877-4.585z"></path>
+                    <g transform="translate(270 .638)">
+                        <path fill="#211D1A" d="M4.945 2.73h1.502c.953 0 1.682.199 2.183.596.5.397.75.96.75 1.69 0 .545-.142 1.02-.426 1.429-.287.409-.702.73-1.252.962-.548.233-1.219.348-2.014.348l-1.43-.001.687-5.023zM3.91 10.016l.842-.001c.424 0 .766.039 1.026.115.262.077.498.21.711.403.21.192.434.467.665.824.233.356.604 1.052 1.118 2.085l1.79 3.714h3.077l-2.93-5.853a6.212 6.212 0 0 0-.657-1.13 2.628 2.628 0 0 0-.894-.77v-.096c1.144-.256 2.049-.78 2.711-1.568.66-.788.991-1.696.991-2.722 0-.61-.099-1.194-.294-1.755a3.749 3.749 0 0 0-.967-1.485c-.449-.43-1.037-.771-1.76-1.027C8.612.49 7.724.363 6.676.363L2.409.362.049 17.155h2.874l.987-7.14z"></path>
+                    </g>
+                    <path fill="#211D1A" d="M308.117 15.72l-8.51-.131.763-5.002 6.009.093.384-2.363-6.008-.093.734-4.664 6.789.105.385-2.362-9.626-.15-2.64 16.754 11.347.176z"></path>
+                    <g transform="translate(0 3.638)">
+                        <path fill="#E6282B" d="M46.99 112.023c-7.99 5.028-14.65 7.206-22.443 7.206-.76 0-5.881.056-9.588-2.346-2.55-1.651-4.29-4.356-4.29-6.814 0-4.852 3.72-8.536 10.202-9.053 11.442-.906 18.915 4.153 25.995 9.61l1.032.826-.907.57zM72.6 57.275c17.424-11.244 21.732-20.792 23.57-24.87 1.35-2.99 3.51-11.995-1.294-19.495-2.893-4.742-8.161-9.172-16.368-11.167-8.388-2.038-17.45-1.821-25.652-.361-4.756.847-15.267 3.782-22.184 10.327-7.453 7.05-11.05 17.506-7.038 22.782.433.57 1.078.522 1.336.478a1.908 1.908 0 0 0 1.468-1.315c3.33-10.881 11.726-18.318 24.277-21.507 10.21-2.596 19.566-1.601 23.576-.765 5.353 1.118 9.37 4.249 10.744 8.546 1.307 4.08 1.38 11.116-8.172 21.45-11.211 12.13-25.596 17.306-33.41 19.31l-1.52.39.654-1.426a952.467 952.467 0 0 1 4.803-10.285c.822-1.74 1.62-3.434 2.388-5.077.283-.568.91-1.843 1.692-3.423 1.806-3.661 4.42-8.961 5.31-10.716 1.238-2.442.658-5.231-1.378-6.63l-2.691-1.846a3.796 3.796 0 0 0-3.137-.518 3.715 3.715 0 0 0-2.41 1.97c-1.202 2.516-19.72 42.867-21.536 46.929a4.372 4.372 0 0 0 .312 4.178 22.924 22.924 0 0 0 5.023 5.496 1.896 1.896 0 0 0 1.655.365 1.843 1.843 0 0 0 1.254-1.054c1.259-2.851 3.87-8.704 3.87-8.704l.287-.111c4.872-1.888 10.154-2.901 15.698-3.013 5.849-.127 10.065 1.374 12.503 4.434 1.279 1.604 2.944 4.873 2.056 9.405-1.481 7.554-7.26 17.917-13.263 24.8 0 0-2.906-2.703-7.271-6.023-3.473-2.642-9.693-6.361-14.972-8.061-4.751-1.53-8.418-2.286-14.318-1.778-9.434.812-17.018 6.776-18.32 16.393-.934 6.917 2.7 15.68 11.434 19.674 2.944 1.222 7.134 2.563 12.126 2.87 5.718.352 12.6-.586 18.96-2.307 5.858-1.585 11.327-4.891 15.349-7.357a13.14 13.14 0 0 0 1.814.975c14.008 6.01 25.03-.436 30.445-6.92 1.516-1.815 2.462-3.612 3.052-5.161 1.089-2.857.439-6.115-1.712-8.288l-.06-.06c-.79-.79-1.832-1.267-2.805-1.557a3.209 3.209 0 0 0-3.794 1.645c-1.775 3.58-5.813 10.699-10.9 13.437-1.773.954-3.755 1.075-5.685.72-.945-.174-1.853-.501-2.72-.917 1.2-1.27 2.292-2.48 3.113-3.41a44.353 44.353 0 0 0 3.235-4.1c5.427-7.832 7.618-15.495 8.278-18.32C82.64 77.196 79.22 65.39 68.357 61.156l-1.52-.592 1.44-.766a58.403 58.403 0 0 0 4.324-2.522z"></path>
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </div>
+    <div class="logo logo-compact">
+        <a href="https://softwarebrothers.co/">
+            <!--?xml version="1.0" encoding="UTF-8"?-->
+            <svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+                <title>0456B5AF-BE98-48D5-B21E-CF86A4157550</title>
+                <desc>Created with sketchtool.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Contact-1" transform="translate(-1097.000000, -278.000000)" fill="#FFFFFF">
+                        <g id="Group-Copy" transform="translate(1097.000000, 278.000000)">
+                            <path d="M20.7400921,44.0288732 C18.9994022,44.1700265 18,45.1752521 18,46.4999485 C18,47.1706945 18.4677005,47.909337 19.1520203,48.3599553 C20.1479059,49.0153352 21.5235784,48.9999692 21.7275381,48.9999692 C23.8209375,48.9999692 25.6094525,48.4056961 27.7559518,47.0331147 L28,46.8773101 L27.7221929,46.6521796 C25.8207968,45.1623875 23.8135528,43.781587 20.7400921,44.0288732" id="Fill-1"></path>
+                            <path d="M47.782994,30.9725253 C47.9348552,32.5790483 48.2222592,34.1799099 48.4217436,35.7814375 C48.5329752,36.6739503 48.1696407,37.2174506 47.265467,37.2174506 C46.1361659,37.2174506 45.7521835,37.2667386 45.5034109,37.5205053 C45.2363216,37.7929216 44.9559113,38.7214013 44.7041414,39.3438291 C43.7843154,41.6170725 42.9967019,43.9692433 41.8284364,46.110941 C39.8385884,49.7565894 35.6287694,50.6520994 32.449009,49.8038792 C32.1819198,49.7329444 31.4752323,49.5244694 30.8008487,49.2114239 C30.1804157,48.9236884 29.5869582,48.5310494 29.3884729,48.4184862 L29.3874738,48.4184862 C28.3634098,49.0465755 26.9656873,49.8937966 25.4687221,50.2990906 C23.8512005,50.7366883 22.1001343,50.9751358 20.6457969,50.8855515 C19.3759575,50.8076231 18.3102648,50.4666033 17.5609497,50.1558889 C15.3396466,49.13949 14.4148252,46.9108723 14.6529409,45.1514898 C14.9839716,42.7047392 16.9132084,41.1881335 19.312682,40.9813236 C20.8136434,40.8521091 21.7464575,41.0445988 22.9546866,41.4335745 C24.2977923,41.8658438 25.8796799,42.8119739 26.7632057,43.4840228 C27.6677123,44.1720569 28.3181178,44.7491929 28.5312564,44.9420157 C29.1836601,44.2726311 29.827072,43.4673714 30.4065424,42.4975963 C30.4238599,42.4679569 30.6583123,42.0629958 30.7542246,41.8818291 C31.3480153,40.7781771 31.8006016,39.6558755 31.9864318,38.7080802 C32.2122254,37.5551402 31.7886126,36.7232383 31.4635763,36.31528 C30.8434764,35.5369956 29.7711232,35.1553464 28.2831498,35.1876501 C26.8731052,35.2159574 25.5296664,35.4737204 24.2901327,35.9539456 L24.2168663,35.9822529 C24.2168663,35.9822529 23.5528066,37.4708843 23.2327658,38.1962175 C23.1731536,38.3314265 23.0565934,38.4293365 22.913724,38.4646373 C22.7661922,38.5016034 22.6126658,38.4669685 22.4927754,38.3713897 C21.9855723,37.969426 21.5552989,37.4988586 21.2149433,36.9736747 C21.0094645,36.6562999 20.9798249,36.2593315 21.1353494,35.9109851 C21.5975936,34.8776018 26.3079551,24.6133716 26.6140087,23.9732934 C26.7315679,23.7275193 26.9546973,23.5450204 27.226782,23.4720875 C27.5045281,23.3981555 27.7945963,23.4461114 28.0247193,23.6039662 L28.7094269,24.0738676 C29.2272869,24.4295406 29.3748187,25.1385554 29.0601064,25.7603171 C28.8336467,26.2065735 28.1685878,27.5546675 27.7090079,28.4858114 C27.5105226,28.8877752 27.3506687,29.2121437 27.2787345,29.3566775 C27.0835795,29.7742935 26.8800988,30.2055637 26.6712897,30.6481568 C26.2746522,31.4880513 25.8646936,32.3569192 25.4494065,33.2644182 L25.283225,33.6270848 L25.6698716,33.5278427 C27.6573884,33.0179781 31.3167105,31.7015217 34.1684374,28.6163581 C36.5982167,25.9871086 36.579234,24.1977537 36.2472042,23.159708 C35.8978568,22.0667129 34.8757909,21.2701119 33.5140356,20.9860397 C32.4939679,20.7732354 30.114143,20.5201347 27.5168502,21.1801946 C24.3244347,21.9917817 22.18872,23.883376 21.3418274,26.6511648 C21.2888758,26.8233398 21.14201,26.9545525 20.9681689,26.9858571 C20.9025622,26.996847 20.7383789,27.009169 20.6281463,26.8639691 C19.6077456,25.5218697 20.5229092,22.8626478 22.41851,21.0689635 C24.1782349,19.4041607 26.8517914,18.6575138 28.0616856,18.4420452 C30.1481119,18.0707199 32.4530053,18.0154374 34.5867218,18.5339607 C36.6744803,19.0414941 38.0142558,20.168458 38.7502498,21.3743494 C39.972466,23.282262 39.4229683,25.5728228 39.0796154,26.3334569 C38.6117097,27.3708365 37.5163775,29.7996036 33.0840952,32.6596409 C32.7460708,32.8777737 32.3867326,33.0875808 31.9847666,33.3013842 L31.6181017,33.4958721 L32.0047483,33.6467334 C34.7682226,34.7237432 35.6380942,37.7579537 35.0356448,40.3305885 C34.8674652,41.0489281 34.3099748,42.9668316 32.9295697,44.9590001 C32.6774668,45.3233318 32.4003867,45.66968 32.1069882,46.0020411 C31.8901864,46.2471491 31.6001182,46.5691864 31.2814095,46.9052108 C34.0042542,48.6379511 37.5833163,46.2847812 38.799205,43.1153617 C39.3843369,41.5907633 39.6058011,39.9199661 39.9251759,38.3021201 C40.1376484,37.2241112 40.2385562,36.5570578 41.8087877,36.5570578 C42.6033947,36.5570578 43.0396627,36.0788308 43.0416608,35.321527 C43.043659,34.7264074 42.9737229,34.1306218 42.9420852,33.5365014 C42.8664876,32.110146 42.6859859,29.9564594 42.7519257,29.3003959 C42.8341838,28.4798169 43.2957619,27.9376487 43.5765053,27.0977542 C44.8619971,23.2519565 43.0243433,19.2186646 39.4282967,17.0639788 C34.6200247,14.1832939 25.7021754,14.6585236 21.2292636,18.0337539 C17.3241661,20.9810443 15.700983,25.8312519 17.0157813,30.6361678 C17.0887146,30.9039217 17.3334909,31.7627987 17.5319762,32.3978815 C17.6458721,32.7625463 17.3844443,33.152188 17.0021271,33.152188 C16.6058226,33.152188 16.0559918,32.5837107 15.816211,32.2333661 C14.0544878,29.6613973 13.0307568,27.009835 13.4670248,23.8633944 C14.0474942,19.6799072 16.4189934,16.7292865 19.8168878,14.4643688 C22.7502068,12.5091663 26.0851587,11.5144142 29.5033679,11.21802 C32.3431058,10.9715799 35.8755439,11.0348551 38.9780416,12.0003008 C46.5884192,14.368457 50.3443197,21.7486719 47.8829027,29.2321253 C47.7067304,29.7673 47.7287103,30.3980534 47.782994,30.9725253 M31,0 C13.8789816,0 0,13.8792401 0,31.0001665 C0,48.121093 13.8789816,62 31,62 C48.1210184,62 62,48.121093 62,31.0001665 C62,13.8792401 48.1210184,0 31,0" id="Fill-3"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </div>
+    <nav class="topbar-navigation" id="topbar-navigation">
+        <div class="topbar-navigation-item">
+            <a class="h1" href="https://softwarebrothers.co/our-work">Our work</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1" href="https://softwarebrothers.co/services">Services</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1" href="https://softwarebrothers.co/about-us">About us</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1" href="https://softwarebrothers.co/career">Career</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1 active" href="https://softwarebrothers.co/blog/">Blog</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1" href="https://softwarebrothers.co/contact">Contact</a>
+        </div>
+        <div class="topbar-navigation-item">
+            <a class="h1 calendly" href="https://softwarebrothers.co/schedule-a-meeting">Schedule a meeting</a>
+        </div>
+    </nav>
+    <div class="hamburger" id="topbar-navigation-trigger" data-navigation="open">
+        <div class="open">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24">
+                <g fill="none" fill-rule="evenodd" stroke="#211D1A" stroke-linecap="square" stroke-width="1.5">
+                    <path d="M5 12h16M1 1h24M1 23h24"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="close">
+            <svg width="24px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g stroke="#DEE2E5" stroke-width="1.5">
+                    <path d="M7.51471863,3.51471863 L24.4852814,20.4852814" id="Line"></path>
+                    <path d="M7.51471863,20.4852814 L24.4852814,3.51471863" id="Line"></path>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+  
+  <div class="blog-post">
+    <nav class="blog-categories hidden-sm">
+    <div class="category-bar">
+        <div class="category-bar-side"></div>
+        <div class="category-bar-main">
+            <ul class="categories">
+                    <li class="h6 ">
+                        <a href="https://softwarebrothers.co/blog/">
+                            All
+                        </a>
+                    </li>
+                    <li class="h6  active">
+                        <a href="https://softwarebrothers.co/blog/development/">
+                            Development
+                        </a>
+                    </li>
+                    <li class="h6 ">
+                        <a href="https://softwarebrothers.co/blog/design/">
+                            Design
+                        </a>
+                    </li>
+                    <li class="h6 ">
+                        <a href="https://softwarebrothers.co/blog/interview/">
+                            Interview
+                        </a>
+                    </li>
+                    <li class="h6 ">
+                        <a href="https://softwarebrothers.co/blog/business/">
+                            Business
+                        </a>
+                    </li>
+            </ul>
+        </div>
+        <div class="category-bar-side subscribe-button-container"></div>
+    </div>
+</nav>    <section class="hero">
+      <div class="grid">
+        <div class="row">
+          <div class="col col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
+            <h1 class="title">
+              <span>My approach to documenting JavaScript projects</span>
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
+            <div class="blog-post-meta has-tags">
+    <img class="blog-post-author-image" src="./doc_files/Zrzut-ekranu-2018-11-14-o-16.06.44.png">
+  <div class="blog-post-captions">
+      <a href="https://softwarebrothers.co/blog/author/wojciech-krysiak/" class="text-small">Wojciech Krysiak</a>
+    <div class="text-caption secondary-captions">
+      <span class="secondary-captions-inner">
+        <time class="post-date" datetime="2019-03-19">19 March 2019</time>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/documentation" data-gtm-vis-recent-on-screen-10087377_40="541" data-gtm-vis-first-on-screen-10087377_40="541" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">documentation</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/jsdoc" data-gtm-vis-recent-on-screen-10087377_40="547" data-gtm-vis-first-on-screen-10087377_40="547" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">jsdoc</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/nodejs" data-gtm-vis-recent-on-screen-10087377_40="549" data-gtm-vis-first-on-screen-10087377_40="549" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">nodejs</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/development/" data-gtm-vis-recent-on-screen-10087377_40="553" data-gtm-vis-first-on-screen-10087377_40="553" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">development</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/mvp" data-gtm-vis-recent-on-screen-10087377_40="556" data-gtm-vis-first-on-screen-10087377_40="556" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">mvp</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/technology" data-gtm-vis-recent-on-screen-10087377_40="558" data-gtm-vis-first-on-screen-10087377_40="558" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">technology</a>
+            <a class="blog-post-tag" href="https://softwarebrothers.co/blog/tag/javascript" data-gtm-vis-recent-on-screen-10087377_40="560" data-gtm-vis-first-on-screen-10087377_40="560" data-gtm-vis-total-visible-time-10087377_40="100" data-gtm-vis-has-fired-10087377_40="1">javascript</a>
+      </span>
+    </div>
+  </div>
+</div>          </div>
+        </div>
+          <div class="row">
+            <div class="col col-md-12 col-md-offset-0 col-lg-10 col-lg-offset-1">
+              <img class="blog-post-image" src="./doc_files/docs.png">
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="post">
+      <div class="grid">
+        <div class="row">
+          <div class="col col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <p>In this short article, I will share with you my recent experience with documenting javascript code. I came to quite an interesting solution using JSDocs, which can be applied to almost any mid-size javascript application.</p>
+ <p>For the sneak peek of what I am talking about, you can check: <a href="https://softwarebrothers.github.io/admin-bro-dev/index.html" rel="nofollow">https://softwarebrothers.github.io/admin-bro-dev/index.html</a> and a related GitHub repository: <a href="https://github.com/SoftwareBrothers/admin-bro-dev" rel="nofollow">https://github.com/SoftwareBrothers/admin-bro-dev</a> </p>
+ <p>So if you have an app where:</p>
+ <ul>
+  <li>Frontend 
+      is written in React/Angular/Vue/Vanilla</li>
+  <li>API is written in Node.js</li>
+  <li>And you also have a couple of (micro)services written in JavaScript...</li>
+ </ul>
+ <p>...this article is for you.</p>
+ <p>I won’t tell you of how to install JSDoc in your project and what each JSDoc tag means - I will rather describe a high-level idea of setting up JSDoc to fully document the entire project.You can always visit my youtube channel and watch 2 episodes about <a href="https://youtu.be/Yl6WARA3IhQ" rel="nofollow">JSDocs</a> and <a href="https://youtu.be/UBMYogTzsBk" rel="nofollow">better-docs</a>.</p>
+ <p>But before we dive into details - let’s talk about: “why bother?</p>
+ <h2>”What problem we are solving - aka why you might need documentation?</h2>
+ <p>I’ve been involved in multiple IT projects for a decade now and there was always a need for some sort of documentation, for several reasons:</p>
+ <ul>
+  <li>To store and share ‘business’ information about the system, describe the commonly used terms etc.</li>
+  <li>To describe the high-level architecture - which service is responsible for what.</li>
+  <li>To describe low-level implementation details - what is the purpose of a given Class/Module, describe its interface and explain how to use it.</li>
+ </ul>
+ <p>In this article, I’d like to tell you how I solved those problems in one of my recent projects. Everything will be grouped into 6 simple concepts.</p>
+ <h2>6 Concepts</h2>
+ <h3>Concept no. 1: the root repository</h3>
+ <p>Generally, ‘<em>App Architecture</em>’ and ‘<em>Business Knowledge</em>’ are terms which relate to all the services in the application. That is why I needed one place where I could put all the information regarding these 2 domains.</p>
+ <p>Since I used JSDocs I gathered all the code in one repo by using git submodules (<a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" rel="nofollow">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a>) - I will refer to it as the <strong>root repo</strong>.</p>
+ <p><em>To put it simply, git submodules allow you to link one repo with another.</em></p>
+ <p>This is the structure of the main folder of my root repository:</p><pre><code>(git submodule) /fronted
+(git submodule) /api
+(git submodule) /microservice1
+(git submodule) /microservice2
+/infrastructure
+/docs-src
+/docs
+package.json
+readme.md etc
+</code></pre>
+ <p><br>In <strong>/infrastructure</strong> I keep all the files related to docker and docker-compose.</p>
+ <p><strong>/docs-src</strong> holds the files used by JSDoc, not necessarily related to code, like static files (images, screenshots) and tutorials (markdown).</p>
+ <p><strong>/docs</strong> folder is the place where the actual documentation is stored. </p>
+ <p>I have to keep it in the repo because I deploy it on GitHub pages - take a look at <em>deploying</em> section.<br></p>
+ <p>OK - so this is how I handled multiple repositories. Next, I installed JSDoc3 in this <strong>root repo</strong> (that is why it has a <em>package.json</em> file)</p>
+ <h3>Concept no. 2: JSDoc</h3>
+ <p><strong>Theory:</strong></p>
+ <p>JSDoc is a markdown language used to describe the code written in javascript. It looks something like this:</p><pre><code>/**
+  * Finds one Record in the Resource by its id
+  * @param  {String} id      uniq id of the Resource Record
+  * @return {Promise&lt;BaseRecord&gt;}   record
+  * @abstract
+  */
+ async findOne(id) {
+	//...
+ }
+</code></pre>
+ <p>In the example above, we described the findOne function: </p>
+ <ul>
+  <li>what it actually does</li>
+  <li>what arguments it takes</li>
+  <li>what it returns</li>
+  <li>and that it is an abstract method.</li>
+ </ul>
+ <p><a href="https://github.com/jsdoc3/jsdoc" rel="nofollow">JSDoc3</a>, on the other hand, is a tool which takes all the JSDoc comments and generates HTML documentation from them.</p>
+ <p><strong>My approach</strong>:</p>
+ <p>Every repository (included as a submodule) has its own JSDoc comments. JSDoc3 can be fed with a <a href="http://usejsdoc.org/about-configuring-jsdoc.html" rel="nofollow">configuration file</a> where I defined that:</p>
+ <ul>
+  <li>all documentation should be generated to <strong>/docs</strong> folder </li>
+  <li>JSDoc should parse all git submodules </li>
+  <li>place where I put my tutorials will be <strong>/docs-src </strong>(read the next point) </li>
+ </ul>
+ <p>...and a bunch of <a href="https://github.com/SoftwareBrothers/admin-bro-dev/blob/master/jsdoc.json" rel="nofollow">other options</a>.</p>
+ <h3>Concept no. 3: JSDoc Tutorials</h3>
+ <p>JSDoc on its own creates a very good, low-level documentation for classes, modules etc. But it also allows you to add custom markdown files - they are called “<a href="http://usejsdoc.org/about-tutorials.html" rel="nofollow">tutorials</a>”.</p>
+ <p>This is why I created <strong>/docs-src</strong> folder in the root repo - it is the place where I put markdown files for tutorials.</p>
+ <p>Tutorials are awesome when it comes to storing “<em>Business Knowledge</em>”. You can put there an overall architecture, installation instructions, relationship between services, database models etc.</p>
+ <p>Take a look at tutorials sections I created: <a href="https://softwarebrothers.github.io/admin-bro-dev/" rel="nofollow">https://softwarebrothers.github.io/admin-bro-dev</a></p>
+ <h3>Concept no. 4: Graphs with mermaid</h3>
+ <p>The next thing I used were graphs created with <a href="https://mermaidjs.github.io/" rel="nofollow">Mermaid</a>. Basically, you can add a graph to your JSDocs comments by using @mermaid tag (available via <a href="https://github.com/Jellyvision/jsdoc-mermaid" rel="nofollow">mermaid jsdoc plugin</a>).</p>
+ <p>I also added some graphs inside tutorials with the following hack:</p><pre><code>### Regular Markdown
+Since markdown allows you to insert HTML, this is what you can do:
+&lt;div class="mermaid"&gt;
+	graph LR
+	A[BaseDatabase] --&gt;|has many| B(BaseResource)
+    B --&gt; |has many|C(BaseRecord)
+	B --&gt; |has many|D(BaseProperty)
+&lt;/div&gt;
+
+At the end of the file you also have to include mermaid:
+
+&lt;script src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css"&gt;
+&lt;script&gt;mermaid.initialize({ startOnLoad: true });&lt;/script&gt;
+</code></pre>
+<h3>Concept no. 5: A neat documentation</h3>
+ <p>By default, JSDoc3 generates documentation which looks like this.</p>
+ <figure>
+  <img src="./doc_files/Screen-Shot-2019-03-19-at-14.36.17.png" alt="Default documentation generated in JSDoc3">
+ </figure>
+ <p></p>
+ <p>I tried to find a good theme which I could use (on JSDoc GitHub page there are a couple of links to different templates), but after all, I decided to ask one of our UI designers to create something super simple, yet very user-friendly.</p>
+ <p>Our Theme is called better-docs and can be found here: <a href="https://github.com/SoftwareBrothers/better-docs" rel="nofollow">https://github.com/SoftwareBrothers/better-docs</a></p>
+ <p>And this is what the same documentation looks like:</p>
+ <figure>
+  <img src="./doc_files/Screen-Shot-2019-03-19-at-14.37.11.png" alt="BetterDocs Theme provide with love by Software Brothers">
+ </figure>
+ <p></p>
+ <h3>Concept no. 6: Grouping things into a @category</h3>
+ <p>When I set JSDoc to parse all the git submodules I ended up with a “not-so-well-organised” documentation (aka absolutely messy). So I decided to write a tiny JSDoc plugin which groups things into categories - it is included in the previously mentioned <a href="https://github.com/SoftwareBrothers/better-docs" rel="nofollow">better-docs</a>.</p>
+ <p>Long story short, by using it you can divide documentation into the categories on the sidebar. Again - take a look at <a href="https://softwarebrothers.github.io/admin-bro-dev/index.html" rel="nofollow">https://softwarebrothers.github.io/admin-bro-dev/index.html</a> - where Adapter, Decorators, Errors and PropertyTypes are categories.</p>
+ <p>And this was the last of the 6 concepts I’ve used. All of these things are not very innovative, but when combined together, they create a very powerful documentation toolset.</p>
+ <h2>Deploying</h2>
+ <p>There are a couple of options when it comes to deploying a JSDoc generated documentation. These are the most obvious ones:</p>
+ <ul>
+  <li>Publish it to AWS S3 bucket and host as a <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html" rel="nofollow">static page</a> </li>
+  <li>Generate it on a server and configure your Nginx/Apache to host it </li>
+  <li>Use <a href="https://pages.github.com/" rel="nofollow">GitHub</a> (or BitBucket) pages </li>
+ </ul>
+ <p>Last time I used the third option - that’s why I created a /<strong>docs</strong> folder inside the root repository for storing documentation. You can configure GitHub to use it as a <a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages" rel="nofollow">publishing source</a>, it’s worth to check this out.</p>
+ <p>Once you’ve generated documentation in the source code, remember that you should push it from time to time. Think of your colleagues who get PullRequests with 20 files of updated HTML documentation - they will be frustrated… to say the least :). </p>
+ <p>Having a separate <strong>root repo</strong> for documentation solves this problem - commits with the code stay within the submodules, but PRs updating the generated documentation go to the root repo.</p>
+<h2>Summary</h2>
+ <p>I have used this structure in 3 projects so far and it’s working quite well.</p>
+ <p>I’ve probably mentioned this already a couple of times, but you can see a working example here:</p>
+ <ul>
+  <li>Source code: <a href="https://github.com/SoftwareBrothers/admin-bro-dev" rel="nofollow">https://github.com/SoftwareBrothers/admin-bro-dev</a> </li>
+  <li>The actual documentation: https://softwarebrothers.github.io/admin-bro-dev/ </li>
+ </ul>
+ <p>Hope you’ve found the article useful and some of the tips I’ve shared will make your dev life easier.</p>
+ <p>You can also <a href="https://twitter.com/wojtek_krysiak" rel="nofollow">follow me on twitter</a> where I post the most recent news about our libraries.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 post-footer">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <section class="related-articles-footer">
+  <div class="grid">
+    <div class="row">
+      <div class="col">
+        <h2 class="related-articles-header text-center">Related Articles</h2>
+      </div>
+    </div>
+    <div class="row">
+      <a href="https://softwarebrothers.co/blog/building-a-bulletproof-javascript-api-clients-with-nock-jscasts-episode-15/" class="related-article col col-md-4 col-sm-12">
+          <img src="./doc_files/Blogpost.png" alt="Building a bulletproof JavaScript API Clients with nock - JSCasts episode 15">
+        <h4>Building a bulletproof JavaScript API Clients with nock - JSCasts episode 15</h4>
+        <p>In this episode, I will tell you how to write bulletproof API clients in javascript using Test Driven Development. The most interesting part will be unit tests, where we will use Nock - server mocking and expectation library.</p>
+        <span class="text-caption">Read more</span>
+      </a>
+      <a href="https://softwarebrothers.co/blog/adminbro-version-v3-released/" class="related-article col col-md-4 col-sm-12">
+          <img src="./doc_files/Blog---AdminBro3.png" alt="AdminBro version 3">
+        <h4>AdminBro version 3</h4>
+        <p>AdminBro - an automated admin interface for Node.js apps with React UI on the frontend has just got a version 3.0. With Features, npm organization and design system</p>
+        <span class="text-caption">Read more</span>
+      </a>
+      <a href="https://softwarebrothers.co/blog/the-most-universal-javascript-code-monitoring-tools-article-part-2/" class="related-article col col-md-4 col-sm-12">
+          <img src="./doc_files/monitoring-tools.jpg" alt="The most universal JavaScript code monitoring tools article - Part 2">
+        <h4>The most universal JavaScript code monitoring tools article - Part 2</h4>
+        <p>Read the second part of the most universal JavaScript code monitoring tools</p>
+        <span class="text-caption">Read more</span>
+      </a>
+    </div>
+  </div>
+</section>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 post-comments">
+            <div id="disqus_thread"><iframe id="dsq-app7617" name="dsq-app7617" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./doc_files/saved_resource(1).html" horizontalscrolling="no" verticalscrolling="no" style="height: 393px !important;"></iframe></div>
+<script>
+  (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//howwedoit.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<footer class="contact-footer" id="contact-footer">
+  <div class="grid">
+    <div class="row">
+      <div class="col reveal-in" data-sr-id="0" style="visibility: visible; opacity: 0;">
+        <h2>Build your web application with us</h2>
+        <p>Google started from an idea. Want to bring to life yours? Let’s talk business!</p>
+        <a class="btn-tertiary" href="https://softwarebrothers.co/contact" data-contact-btn="footer">contact us</a>
+      </div>
+    </div>
+  </div>
+</footer><footer class="basic-footer">
+  <div class="basic-footer-component footer-featured-works panel">
+    <div class="grid">
+      <div class="row">
+        <div class="col">
+          <div class="h5">Our work was featured on</div>
+          <div class="featured-works">
+            <div class="featured-work new-york-times">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/new-york-times.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/new-york-times.png?v=1598821200" type="image/png">
+                <img src="./doc_files/new-york-times.png">
+              </picture>
+            </div>
+            <div class="featured-work pc-mag">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/pc-mag.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/pc-mag.png?v=1598821200" type="image/png">
+                <img src="./doc_files/pc-mag.png">
+              </picture>
+            </div>
+            <div class="featured-work gigacom">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/gigacom.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/gigacom.png?v=1598821200" type="image/png">
+                <img src="./doc_files/gigacom.png">
+              </picture>
+            </div>
+            <div class="featured-work c-net">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/c-net.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/c-net.png?v=1598821200" type="image/png">
+                <img src="./doc_files/c-net.png">
+              </picture>
+            </div>
+            <div class="featured-work wired">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/wired.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/wired.png?v=1598821200" type="image/png">
+                <img src="./doc_files/wired.png">
+              </picture>
+            </div>
+            <div class="featured-work new-scientist">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/new-scientist.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/new-scientist.png?v=1598821200" type="image/png">
+                <img src="./doc_files/new-scientist.png">
+              </picture>
+            </div>
+            <div class="featured-work tech-in-asia">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/tech-in-asia.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/tech-in-asia.png?v=1598821200" type="image/png">
+                <img src="./doc_files/tech-in-asia.png">
+              </picture>
+            </div>
+            <div class="featured-work wamda">
+              <picture>
+                <source srcset="https://softwarebrothers.co/assets/images/footer/wamda.webp?v=1598821200" type="image/webp">
+                <source srcset="https://softwarebrothers.co/assets/images/footer/wamda.png?v=1598821200" type="image/png">
+                <img src="./doc_files/wamda.png">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="basic-footer-component footer-main grid panel">
+    <div class="row">
+      <div class="col col-lg-5 col-md-6 footer-main-intro">
+        
+
+        
+
+        
+          <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="310" height="133" viewBox="0 0 310 133" class="sbw-logo">
+            <g fill="none" fill-rule="evenodd">
+              <path fill="#E6282B" d="M300.317 103.066c-.932-1.923-2.955-3.252-5.303-3.498-79.728-8.325-142.837-1.119-186.026 8.171-4.964 1.067-8.001 6.242-6.318 11.032.189.541.426 1.094.715 1.658.922 1.799 3.04 2.623 4.976 2.041 64.349-19.354 137.797-19.377 190.004-15.631 1.777.128 3.069-1.467 2.366-2.918l-.414-.855z"></path>
+              <path fill="#E6282B" d="M140.17 61.965c-.062.2-.191.406-.388.62-1.637 1.72-3.068 3.952-4.293 6.696-1.223 2.744-1.862 5.218-1.928 7.413.006.257-.052.49-.178.697-3.701 6.672-6.863 10.186-9.602 10.531-1.693.215-2.555-.834-2.59-3.151.013-2.838.952-6.653 2.857-11.433 1.906-4.78 4.258-9.124 7.06-13.021 2.802-3.898 5.305-5.96 7.464-6.191 1.417-.152 2.148.77 2.19 2.758.044 1.925-.155 3.62-.591 5.08m85.324 1.125c2.337-4.148 4.92-7.75 7.747-10.8 2.826-3.049 5.044-4.575 6.619-4.587.684-.006.997.407.934 1.24-.161 2.176-1.97 5.242-5.361 9.218-3.394 3.979-6.41 6.002-9.101 6.06-.741.017-1.1-.166-1.075-.55.012-.194.09-.388.237-.581M308.7 44.236c-.523-.647-1.262-1.325-2.306-1.923-2.44-1.398-4.628-1.784-7.67-.97a7.211 7.211 0 0 0-2.105 1.133c-2.57 1.672-7.33 7.532-10.606 11.677-.003 0-6.252 8.511-10.511 14.248-1.316 1.773-2.552 3.269-3.217 4.145-.292.383-2.944 3.551-3.294 3.93-1.227 1.33-2.343 2.34-3.353 3.03-1.011.692-1.88 1.044-2.612 1.06-.665.014-.974-.337-.93-1.056.058-.915.636-2.446 1.747-4.588a50.492 50.492 0 0 1 3.644-6.01c1.322-1.863 2.92-4.107 4.81-6.726 1.888-2.618 3.08-4.252 3.557-4.907 1.39-1.524 2.145-2.979 2.25-4.368.15-1.955-.804-3.578-2.872-4.86-2.071-1.28-4.895-2.444-8.474-3.473-.273-.059-.401-.186-.39-.378.005-.063.08-.159.227-.29 1.824-2.654 2.805-4.843 2.92-6.572.12-1.793-.758-2.68-2.636-2.648-2.018.034-4.111 1.019-6.265 2.955-2.157 1.936-3.301 4.288-3.455 7.043-.053.962.059 1.76.337 2.392.054.122.14.223.214.33a838.573 838.573 0 0 1-8.918 13.484 148.63 148.63 0 0 1-7.582 9.348c-2.931 3.283-5.935 5.908-9.02 7.879-3.088 1.969-5.677 2.985-7.794 3.035-2.713.067-3.974-1.526-3.79-4.796.113-1.984.749-4.436 1.92-7.346.082-.257.256-.39.526-.396 1.256.224 2.22.33 2.89.315 4.688-.106 9.333-2.112 14.01-6.023 4.675-3.907 7.23-8.012 7.585-12.365.147-1.791-.285-3.422-1.3-4.894-1.014-1.468-2.305-2.568-3.866-3.295-1.561-.724-3.137-1.08-4.721-1.065-3.65.04-7.647 2.1-11.922 6.195-4.278 4.094-7.791 8.886-10.556 14.353-.208.412-.396.814-.59 1.22l-.135.196c-.977 1.41-1.897 2.738-2.758 3.985a151.56 151.56 0 0 1-2.835 3.948 210.593 210.593 0 0 1-2.858 3.766 87.465 87.465 0 0 1-2.511 3.086c-.797.933-1.518 1.653-2.165 2.164-.646.512-1.133.776-1.462.792-.595.029-.88-.277-.858-.92.058-1.537 1.667-5.368 4.91-11.466 3.248-6.1 6.522-11.475 9.803-16.133.949-1.375 1.445-2.414 1.48-3.12a6.856 6.856 0 0 0-.424-2.771 7.866 7.866 0 0 0-1.371-2.355 6.919 6.919 0 0 0-2.08-1.657c-.801-.417-1.616-.612-2.44-.581-1.298.05-3.33 1.22-6.07 3.517-2.74 2.299-5.67 5.194-8.771 8.689a154.17 154.17 0 0 0-9.08 11.29c-.205.206-.406.314-.606.328-.267.017-.398-.093-.393-.332 0-.061.035-.123.104-.186a624.909 624.909 0 0 1 12.254-23.235 368.029 368.029 0 0 1 3.549-6.267 4.297 4.297 0 0 0-1.186-5.633l-1.948-1.419a3.284 3.284 0 0 0-4.858 1.154 1327.164 1327.164 0 0 0-12.401 24.818 918.07 918.07 0 0 0-2.773 5.757 381.833 381.833 0 0 1-5.647 8.824c-2.392 3.615-4.87 6.927-7.443 9.938-2.571 3.011-4.53 4.584-5.907 4.71-.983.09-1.48-.474-1.488-1.697-.01-1.352.588-3.742 1.81-7.17 1.225-3.426 2.786-7.188 4.7-11.277a225.472 225.472 0 0 1 6.216-12.282c.136-.209.376-.327.717-.353 2.254-.236 3.79-.412 4.606-.535 1.632-.311 3.047-.938 4.25-1.886 1.2-.948 1.813-1.837 1.827-2.672.012-.704-.528-1.118-1.617-1.237-.683-.018-2.388 0-5.115.069-.342.025-.51-.105-.508-.389 0-.07.035-.18.105-.326.446-.727.87-1.412 1.272-2.053a4.295 4.295 0 0 0-1.118-5.75l-1.47-1.07a3.283 3.283 0 0 0-4.763.986 394.762 394.762 0 0 0-5.04 8.846c-.133.385-.33.587-.596.61-2.855.305-4.88.646-6.07 1.009-.728.257-1.09.736-1.082 1.438.005.637.343 1.307 1.012 2.011.668.706 1.432 1.148 2.295 1.326.332.036.5.15.5.339a.411.411 0 0 1-.1.295 1171.435 1171.435 0 0 0-7.846 13.974c-.446.808-.87 1.567-1.281 2.305-.451.61-.931 1.24-1.47 1.919-1.501 1.885-2.903 3.155-4.214 3.807l-.2.021c-.264.029-.366-.09-.304-.352-.001-.065.029-.133.094-.205 2.602-5.803 3.905-10.753 3.836-14.862-.05-3.015-.825-5.06-2.335-6.13-.206-.172-.345-.35-.416-.535-1.832-3.8-4.735-5.496-8.674-5.064-2.92.32-5.956 1.956-9.07 4.904-3.115 2.948-5.744 6.404-7.887 10.355a67.842 67.842 0 0 0-4.035 8.925 1250.725 1250.725 0 0 0-4.32 7.818 41.13 41.13 0 0 1-2.72 4.267 1169.313 1169.313 0 0 0-2.703 3.772c-.75 1.053-1.528 1.928-2.336 2.63-.81.701-1.504 1.096-2.087 1.184-.648.097-1.002-.302-1.06-1.206-.075-1.147.395-2.782 1.419-4.906 1.023-2.124 2.01-4.157 2.959-6.103.947-1.944 2.124-4.344 3.54-7.197 1.416-2.852 2.309-4.63 2.662-5.337 1.227-1.644 1.812-3.137 1.744-4.482-.102-1.986-1.256-3.495-3.475-4.513-2.218-1.017-5.11-1.823-8.672-2.403-.48-.059-.593-.268-.344-.629 1.515-2.871 2.233-5.17 2.129-6.9-.108-1.794-1.08-2.563-2.912-2.295-1.221.178-2.487.754-3.79 1.724-1.304.971-2.423 2.323-3.358 4.053-.936 1.73-1.333 3.525-1.2 5.38.069.96.328 1.73.775 2.307a.72.72 0 0 1 .124.321.805.805 0 0 1-.076.352c-1.537 3.684-3.184 6.639-5.645 11.588a1.617 1.617 0 0 0 1.059 2.29l.224.055a3.502 3.502 0 0 0 4.053-2.017c2.143-4.974 3.028-7.534 4.366-10.402.175-.416.395-.642.663-.684a14.03 14.03 0 0 1 2.015-.155c.675-.004 1.377.151 2.106.465.728.314 1.11.791 1.15 1.431.06.961-.591 2.745-1.935 5.352-1.345 2.61-2.74 5.34-4.183 8.194-1.443 2.853-2.732 5.928-3.867 9.222-1.136 3.294-1.615 5.969-1.462 8.02a9.304 9.304 0 0 0 .71 2.945 8.676 8.676 0 0 0 1.553 2.472 5.84 5.84 0 0 0 2.307 1.574c.902.342 1.865.433 2.893.273 1.697-.264 3.503-1.279 5.43-3.047 1.928-1.767 4.153-4.463 6.703-8.085a170.152 170.152 0 0 0 2.69-3.936c.004.251-.018.526-.006.77.185 3.528 1.344 6.27 3.46 8.242 2.116 1.971 4.522 2.778 7.235 2.428 2.713-.35 5.463-1.805 8.278-4.365 2.814-2.56 5.452-5.774 7.92-9.652.127-.208.387-.334.78-.377 2.54-.278 5.045-1.575 7.54-3.855.426-.091.852-.206 1.278-.352.064-.07.13-.11.196-.118.198-.02.298.035.3.163 0 .066-.032.164-.095.3-.622 2.569-.915 4.624-.891 6.165.046 2.825.75 4.986 2.11 6.489 1.356 1.502 3.07 2.151 5.15 1.954 1.887-.18 4.04-1.344 6.483-3.486 1.926-1.689 3.68-3.6 5.343-5.633-.062.158-.13.326-.186.473-.2.66-.3 1.31-.3 1.951-.004 1.541.58 2.825 1.75 3.85 1.172 1.029 2.372 1.494 3.612 1.397 1.04-.082 1.666-.578 1.87-1.492 3.325-6.025 7.984-12.984 14.102-20.822 6.119-7.836 11.39-13.685 15.682-17.59.21-.202.383-.305.52-.31.204-.01.303.082.295.274-.005.13-.043.227-.113.294-2.378 3.562-3.981 6.041-4.838 7.428-.856 1.386-2.25 3.761-4.16 7.13-1.91 3.367-3.268 6.265-4.095 8.682-.827 2.42-1.261 4.56-1.31 6.42-.07 2.76.566 4.869 1.899 6.329 1.334 1.46 2.814 2.145 4.45 2.057 3.639-.19 8.607-4.81 15.183-13.727-.016.216-.044.438-.054.65-.174 3.72.76 6.676 2.786 8.875 2.025 2.201 4.668 3.248 7.953 3.16 4.202-.115 8.458-1.85 12.824-5.209 4.366-3.356 8.348-7.397 11.952-12.14 2.449-3.142 4.317-5.662 5.597-7.57 2.459-3.358 5.728-8.206 9.885-14.258.185.016.352.024.49.028 1.165.032 2.32.13 3.463.462 1.143.331 1.682.982 1.618 1.945-.063.965-.95 2.66-2.643 5.092a1099.176 1099.176 0 0 0-5.244 7.599c-1.803 2.633-3.505 5.511-5.11 8.63-1.604 3.121-2.455 5.775-2.57 7.955-.072 1.41.14 2.716.638 3.915a6.867 6.867 0 0 0 2.313 2.953c1.044.77 2.257 1.133 3.642 1.097 1.772-.046 3.752-.796 5.952-2.252 2.199-1.457 4.375-3.37 6.53-5.742.192-.21 6.714-8.188 7.953-10.043 1.224-1.743 8.442-11.965 13.298-17.844a64.938 64.938 0 0 0-.103 2.907c-.043 3.322 1.1 13.634.67 19.595-.427 5.964-4.82 9.358-10.367 9.085-3.1-.154-4.99-1.77-6.054-3.168-.868-1.14-2.75-.704-2.89.722-.048.501.075 1.02.378 1.465 4.68 6.884 12.634 6.556 12.634 6.556s8.85-.226 13.386-6.406c4.535-6.18 2.495-19.55 2.32-26.957-.117-5.005 3.523-7.741 5.899-8.991a2.318 2.318 0 0 0 .74-3.524"></path>
+              <path fill="#211D1A" d="M119.314 23.385a3.003 3.003 0 0 1-1.179.38c-.597.066-1.274.01-2.033-.173-.758-.182-1.57-.51-2.437-.986l-.11 2.71a8.972 8.972 0 0 0 4.917.831c1.035-.116 1.93-.42 2.681-.915.751-.496 1.305-1.132 1.661-1.909a4.622 4.622 0 0 0 .39-2.48c-.072-.639-.242-1.19-.51-1.662a5.447 5.447 0 0 0-.987-1.25 7.941 7.941 0 0 0-1.263-.966 36.91 36.91 0 0 0-1.352-.793c-.713-.389-1.23-.704-1.55-.946a3.702 3.702 0 0 1-.753-.727 1.642 1.642 0 0 1-.32-.804c-.073-.653.114-1.21.56-1.67.442-.462 1.062-.737 1.858-.826a5.821 5.821 0 0 1 1.808.096c.631.127 1.23.341 1.795.64l.133-2.615a8.586 8.586 0 0 0-1.924-.486 7.98 7.98 0 0 0-2.03-.04 6.47 6.47 0 0 0-2.762.941c-.82.515-1.435 1.164-1.845 1.947a4.258 4.258 0 0 0-.464 2.502c.07.63.244 1.183.53 1.665.284.48.65.92 1.102 1.322.451.4 1.18.883 2.187 1.45.362.208.712.414 1.048.615.337.2.641.412.911.635.272.224.494.465.668.724.172.26.28.556.317.89.046.406-.028.773-.222 1.102a2.214 2.214 0 0 1-.825.798M139.1 12.876c.451-1.229 1.092-2.2 1.925-2.913.83-.71 1.768-1.113 2.815-1.205.828-.07 1.58.06 2.246.396.67.336 1.204.845 1.607 1.526.401.68.64 1.48.721 2.398a9.077 9.077 0 0 1-.46 3.83c-.428 1.21-1.06 2.184-1.902 2.922-.84.736-1.78 1.15-2.817 1.24-.838.073-1.594-.058-2.266-.393-.675-.336-1.217-.85-1.632-1.547-.413-.696-.664-1.523-.747-2.48a8.653 8.653 0 0 1 .51-3.774m-2.175 7.641a6.522 6.522 0 0 0 2.763 2.42c1.143.535 2.391.743 3.74.627a8.237 8.237 0 0 0 4.344-1.664c1.274-.968 2.226-2.239 2.851-3.815.628-1.574.862-3.296.7-5.165-.123-1.396-.52-2.627-1.192-3.69a6.255 6.255 0 0 0-2.689-2.378c-1.118-.522-2.353-.724-3.702-.607a8.333 8.333 0 0 0-3.424 1.053 8.495 8.495 0 0 0-2.67 2.387 10.067 10.067 0 0 0-1.608 3.35 10.634 10.634 0 0 0-.34 3.77c.12 1.397.53 2.634 1.227 3.712M167.757 13.994l5.313-.36.153-2.384-5.278.358.32-4.71 5.949-.402.15-2.384-8.718.592-1.262 16.916 2.817-.191zM190.786 20.038l2.869-.149 1.276-14.46 5.042-.26.223-2.433-12.904.67-.226 2.428 4.996-.257zM216.789 19.012l5.23-11.74 3.456 11.455 1.13-.037 7.612-17.22-2.896.095-4.772 11.413-.072.003-3.398-11.145-1.188.04-4.967 11.3h-.05l-2.71-11.047-2.798.092 4.27 16.83zM251.346 4.234h.06l1.213 7.121-4.062.063 2.79-7.183zm-3.623 9.24l5.24-.08.862 4.543 2.78-.042-3.386-16.887-2.872.044-7.507 17.053 3.006-.047 1.877-4.585z"></path>
+              <g transform="translate(270 .638)">
+                <path fill="#211D1A" d="M4.945 2.73h1.502c.953 0 1.682.199 2.183.596.5.397.75.96.75 1.69 0 .545-.142 1.02-.426 1.429-.287.409-.702.73-1.252.962-.548.233-1.219.348-2.014.348l-1.43-.001.687-5.023zM3.91 10.016l.842-.001c.424 0 .766.039 1.026.115.262.077.498.21.711.403.21.192.434.467.665.824.233.356.604 1.052 1.118 2.085l1.79 3.714h3.077l-2.93-5.853a6.212 6.212 0 0 0-.657-1.13 2.628 2.628 0 0 0-.894-.77v-.096c1.144-.256 2.049-.78 2.711-1.568.66-.788.991-1.696.991-2.722 0-.61-.099-1.194-.294-1.755a3.749 3.749 0 0 0-.967-1.485c-.449-.43-1.037-.771-1.76-1.027C8.612.49 7.724.363 6.676.363L2.409.362.049 17.155h2.874l.987-7.14z"></path>
+              </g>
+              <path fill="#211D1A" d="M308.117 15.72l-8.51-.131.763-5.002 6.009.093.384-2.363-6.008-.093.734-4.664 6.789.105.385-2.362-9.626-.15-2.64 16.754 11.347.176z"></path>
+              <g transform="translate(0 3.638)">
+                <path fill="#E6282B" d="M46.99 112.023c-7.99 5.028-14.65 7.206-22.443 7.206-.76 0-5.881.056-9.588-2.346-2.55-1.651-4.29-4.356-4.29-6.814 0-4.852 3.72-8.536 10.202-9.053 11.442-.906 18.915 4.153 25.995 9.61l1.032.826-.907.57zM72.6 57.275c17.424-11.244 21.732-20.792 23.57-24.87 1.35-2.99 3.51-11.995-1.294-19.495-2.893-4.742-8.161-9.172-16.368-11.167-8.388-2.038-17.45-1.821-25.652-.361-4.756.847-15.267 3.782-22.184 10.327-7.453 7.05-11.05 17.506-7.038 22.782.433.57 1.078.522 1.336.478a1.908 1.908 0 0 0 1.468-1.315c3.33-10.881 11.726-18.318 24.277-21.507 10.21-2.596 19.566-1.601 23.576-.765 5.353 1.118 9.37 4.249 10.744 8.546 1.307 4.08 1.38 11.116-8.172 21.45-11.211 12.13-25.596 17.306-33.41 19.31l-1.52.39.654-1.426a952.467 952.467 0 0 1 4.803-10.285c.822-1.74 1.62-3.434 2.388-5.077.283-.568.91-1.843 1.692-3.423 1.806-3.661 4.42-8.961 5.31-10.716 1.238-2.442.658-5.231-1.378-6.63l-2.691-1.846a3.796 3.796 0 0 0-3.137-.518 3.715 3.715 0 0 0-2.41 1.97c-1.202 2.516-19.72 42.867-21.536 46.929a4.372 4.372 0 0 0 .312 4.178 22.924 22.924 0 0 0 5.023 5.496 1.896 1.896 0 0 0 1.655.365 1.843 1.843 0 0 0 1.254-1.054c1.259-2.851 3.87-8.704 3.87-8.704l.287-.111c4.872-1.888 10.154-2.901 15.698-3.013 5.849-.127 10.065 1.374 12.503 4.434 1.279 1.604 2.944 4.873 2.056 9.405-1.481 7.554-7.26 17.917-13.263 24.8 0 0-2.906-2.703-7.271-6.023-3.473-2.642-9.693-6.361-14.972-8.061-4.751-1.53-8.418-2.286-14.318-1.778-9.434.812-17.018 6.776-18.32 16.393-.934 6.917 2.7 15.68 11.434 19.674 2.944 1.222 7.134 2.563 12.126 2.87 5.718.352 12.6-.586 18.96-2.307 5.858-1.585 11.327-4.891 15.349-7.357a13.14 13.14 0 0 0 1.814.975c14.008 6.01 25.03-.436 30.445-6.92 1.516-1.815 2.462-3.612 3.052-5.161 1.089-2.857.439-6.115-1.712-8.288l-.06-.06c-.79-.79-1.832-1.267-2.805-1.557a3.209 3.209 0 0 0-3.794 1.645c-1.775 3.58-5.813 10.699-10.9 13.437-1.773.954-3.755 1.075-5.685.72-.945-.174-1.853-.501-2.72-.917 1.2-1.27 2.292-2.48 3.113-3.41a44.353 44.353 0 0 0 3.235-4.1c5.427-7.832 7.618-15.495 8.278-18.32C82.64 77.196 79.22 65.39 68.357 61.156l-1.52-.592 1.44-.766a58.403 58.403 0 0 0 4.324-2.522z"></path>
+              </g>
+            </g>
+          </svg>
+        
+
+        
+        <div class="footer-about-wrapper">
+            <p class="footer-about text-small">We are a software company
+ who provides web and mobile development and UX/UI&nbsp;services</p>
+        </div>
+      </div>
+      <div class="col col-lg-5 col-lg-offset-2 col-md-6 social-col">
+        <div class="social-links">
+          <a class="social-link" href="https://www.facebook.com/softwarebrothers/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+              <path fill="#BDC3CB" fill-rule="evenodd" d="M14.227 30.948h2.546a15.71 15.71 0 0 1-2.546 0zm-2.147-.327C5.165 29.064 0 22.885 0 15.5 0 6.94 6.94 0 15.5 0 24.06 0 31 6.94 31 15.5c0 7.98-6.03 14.551-13.782 15.406V18.448h3.448s.323-2.017.48-4.223h-3.909V11.35c0-.43.56-1.008 1.114-1.008h2.8v-4.38h-3.807c-5.391 0-5.264 4.211-5.264 4.84v3.44H9.579v4.207h2.5V30.62z" opacity=".6"></path>
+            </svg>
+          </a>
+          <a class="social-link" href="https://twitter.com/SoftwareBros">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+              <path fill="#BDC3CB" fill-rule="evenodd" d="M15.5 31C6.94 31 0 24.06 0 15.5 0 6.94 6.94 0 15.5 0 24.06 0 31 6.94 31 15.5 31 24.06 24.06 31 15.5 31zm10.73-20.678a8.573 8.573 0 0 1-2.394.665 4.179 4.179 0 0 0 1.829-2.328 8.237 8.237 0 0 1-2.635 1.02 4.138 4.138 0 0 0-3.036-1.333c-2.3 0-4.152 1.893-4.152 4.213 0 .334.027.655.096.96-3.455-.17-6.512-1.849-8.565-4.405a4.284 4.284 0 0 0-.569 2.129c0 1.459.741 2.752 1.846 3.5a4.062 4.062 0 0 1-1.878-.519v.047c0 2.046 1.44 3.746 3.33 4.138a4.095 4.095 0 0 1-1.09.139c-.266 0-.535-.016-.787-.072.539 1.668 2.067 2.894 3.883 2.934a8.279 8.279 0 0 1-5.152 1.796 7.68 7.68 0 0 1-.994-.058 11.585 11.585 0 0 0 6.374 1.89c7.647 0 11.827-6.42 11.827-11.985a10.9 10.9 0 0 0-.015-.544 8.353 8.353 0 0 0 2.083-2.187z" opacity=".6"></path>
+            </svg>
+          </a>
+          <a class="social-link" href="https://www.instagram.com/softwarebrothers/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="31" viewBox="0 0 32 31">
+              <g fill="none" fill-rule="evenodd" opacity=".6">
+                <ellipse cx="15.6" cy="15.5" fill="#BDC3CB" rx="15.6" ry="15.5"></ellipse>
+                <g fill="#F8F9FA" fill-rule="nonzero">
+                  <path d="M20.44 4.77h-9.68c-3.286 0-5.96 2.656-5.96 5.922v9.616c0 3.266 2.674 5.923 5.96 5.923h9.68c3.286 0 5.96-2.657 5.96-5.923v-9.616c0-3.266-2.674-5.923-5.96-5.923zm4.044 15.538c0 2.216-1.815 4.019-4.045 4.019h-9.678c-2.23 0-4.045-1.803-4.045-4.019v-9.616c0-2.216 1.815-4.019 4.045-4.019h9.678c2.23 0 4.045 1.803 4.045 4.019v9.616z"></path>
+                  <path d="M15.6 9.722c-3.207 0-5.815 2.592-5.815 5.778 0 3.186 2.608 5.778 5.815 5.778 3.207 0 5.815-2.592 5.815-5.778 0-3.186-2.608-5.778-5.815-5.778zm0 9.566c-2.102 0-3.813-1.699-3.813-3.788 0-2.09 1.71-3.789 3.813-3.789s3.813 1.7 3.813 3.789c0 2.089-1.71 3.788-3.813 3.788zM21.415 8.071a1.653 1.653 0 0 0-1.662 1.65 1.66 1.66 0 0 0 1.662 1.652c.438 0 .866-.177 1.176-.483.31-.308.486-.734.486-1.168a1.653 1.653 0 0 0-1.662-1.651z"></path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/kmp-group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+              <path fill="#BDC3CB" fill-rule="evenodd" d="M15.5 31C6.94 31 0 24.06 0 15.5 0 6.94 6.94 0 15.5 0 24.06 0 31 6.94 31 15.5 31 24.06 24.06 31 15.5 31zm9.538-14.759c0-3.475-1.89-5.092-4.414-5.092-2.036 0-2.946 1.1-3.455 1.87v.036h-.025l.025-.036v-1.604h-3.834c.051 1.062 0 11.313 0 11.313h3.834V16.41c0-.338.026-.675.127-.917.278-.676.908-1.375 1.967-1.375 1.388 0 1.942 1.037 1.942 2.558v6.052h3.833v-6.487zM9.324 5.961c-1.312 0-2.17.845-2.17 1.955 0 1.086.833 1.956 2.119 1.956h.025c1.338 0 2.17-.87 2.17-1.956-.026-1.11-.832-1.954-2.144-1.954zM7.382 22.729h3.833V11.415H7.382v11.313z" opacity=".6"></path>
+            </svg>
+          </a>
+          <a class="social-link" href="https://dribbble.com/SoftwareBrothersTeam">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+              <g fill="none" fill-rule="evenodd" opacity=".6">
+                <circle cx="15.5" cy="15.5" r="15.5" fill="#BDC3CB"></circle>
+                <path fill="#F8F9FA" fill-rule="nonzero" d="M25.824 9.515a11.873 11.873 0 0 0-4.339-4.339c-1.827-1.066-3.821-1.6-5.985-1.6-2.163 0-4.158.534-5.985 1.6a11.87 11.87 0 0 0-4.339 4.34c-1.066 1.826-1.6 3.821-1.6 5.984s.534 4.158 1.6 5.985a11.873 11.873 0 0 0 4.34 4.339c1.826 1.066 3.821 1.6 5.984 1.6s4.158-.534 5.985-1.6a11.87 11.87 0 0 0 4.34-4.34c1.065-1.826 1.598-3.821 1.598-5.984s-.533-4.158-1.599-5.985zM15.5 5.315c2.567 0 4.808.85 6.722 2.547l-.194.271c-.077.109-.271.318-.582.629-.31.31-.65.606-1.017.885-.367.28-.866.598-1.498.955-.631.357-1.304.67-2.018.94-1.19-2.195-2.463-4.172-3.82-5.931.819-.197 1.62-.295 2.407-.295zM7.52 9.182a10.047 10.047 0 0 1 3.633-2.887C12.437 8 13.7 9.958 14.941 12.162c-3.146.828-6.282 1.242-9.408 1.242.332-1.563.994-2.97 1.988-4.223zM6 19.171a9.99 9.99 0 0 1-.683-3.671c0-.145.005-.254.015-.326 3.747 0 7.23-.481 10.449-1.444.331.642.605 1.216.823 1.723-.042.021-.109.044-.202.07a9.69 9.69 0 0 1-.203.055l-.574.201c-.393.145-.908.394-1.545.745-.636.353-1.311.772-2.026 1.258-.714.487-1.451 1.131-2.212 1.933-.76.803-1.4 1.664-1.917 2.585a10.196 10.196 0 0 1-1.925-3.128zm9.501 6.513c-2.422 0-4.585-.776-6.49-2.328l.234.17c.362-.797.895-1.563 1.599-2.297.704-.735 1.381-1.328 2.033-1.778.652-.45 1.361-.874 2.127-1.273.766-.398 1.289-.652 1.568-.76.28-.11.502-.195.668-.257l.03-.016h.032c1.014 2.66 1.739 5.238 2.174 7.732a10.18 10.18 0 0 1-3.975.807zm8.57-4.68a10.174 10.174 0 0 1-2.872 2.942c-.424-2.38-1.086-4.808-1.987-7.282 2.06-.32 4.176-.17 6.35.45a10.047 10.047 0 0 1-1.49 3.89zm1.46-5.644a12.64 12.64 0 0 0-.389-.07l-.567-.093c-.222-.036-.47-.07-.745-.1a25.592 25.592 0 0 0-2.942-.17c-.362-.001-.743.01-1.141.03-.398.02-.784.057-1.156.109a1.839 1.839 0 0 1-.117-.257 5.368 5.368 0 0 1-.1-.272 103.05 103.05 0 0 0-.684-1.474c.714-.29 1.395-.624 2.042-1.002a15.868 15.868 0 0 0 1.552-1.009c.388-.295.756-.608 1.103-.94a8.96 8.96 0 0 0 .675-.69c.104-.13.202-.256.295-.38l.016-.016c1.51 1.842 2.282 3.964 2.313 6.365l-.156-.03z"></path>
+              </g>
+            </svg>
+          </a>
+          <a class="social-link" href="https://github.com/SoftwareBrothers">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+              <path fill="#BDC3CB" fill-rule="nonzero" d="M28.92 7.913c-1.385-2.434-3.265-4.361-5.64-5.782C20.905.71 18.312 0 15.5 0c-2.812 0-5.406.71-7.78 2.13C5.345 3.553 3.465 5.48 2.079 7.914.693 10.348 0 13.006 0 15.888c0 3.462.985 6.576 2.957 9.34 1.97 2.766 4.517 4.68 7.638 5.742.364.069.633.02.808-.145a.819.819 0 0 0 .262-.62l-.01-1.118c-.007-.703-.01-1.317-.01-1.84l-.465.082a5.78 5.78 0 0 1-1.12.072 8.332 8.332 0 0 1-1.402-.145 3.098 3.098 0 0 1-1.353-.62 2.624 2.624 0 0 1-.887-1.272l-.202-.476a5.194 5.194 0 0 0-.636-1.055c-.29-.386-.582-.648-.878-.786l-.141-.104a1.496 1.496 0 0 1-.262-.248 1.139 1.139 0 0 1-.182-.29c-.04-.097-.007-.176.101-.238.108-.062.303-.093.585-.093l.404.062c.269.056.602.22.999.497.397.275.723.634.979 1.075.31.566.682.997 1.12 1.293.437.297.878.445 1.321.445.444 0 .828-.035 1.15-.103.324-.07.626-.173.909-.31.121-.925.45-1.635.989-2.132a13.513 13.513 0 0 1-2.069-.372 8.126 8.126 0 0 1-1.897-.807 5.467 5.467 0 0 1-1.625-1.386c-.43-.552-.783-1.276-1.059-2.173-.276-.896-.414-1.93-.414-3.103 0-1.669.532-3.09 1.595-4.262-.498-1.255-.451-2.661.141-4.22.39-.124.969-.03 1.736.28.767.31 1.328.576 1.685.796.357.22.642.407.858.559a14.003 14.003 0 0 1 3.875-.538c1.332 0 2.623.18 3.875.538l.767-.497a10.748 10.748 0 0 1 1.856-.91c.713-.276 1.259-.352 1.636-.228.605 1.559.659 2.966.16 4.22 1.064 1.173 1.595 2.594 1.595 4.262 0 1.173-.138 2.21-.413 3.114-.276.903-.632 1.627-1.07 2.172a5.675 5.675 0 0 1-1.635 1.376 8.141 8.141 0 0 1-1.897.807 13.5 13.5 0 0 1-2.068.373c.699.62 1.049 1.6 1.049 2.937v4.365c0 .248.084.455.252.62.168.165.434.214.797.145 3.122-1.062 5.668-2.975 7.64-5.74 1.97-2.766 2.956-5.88 2.956-9.341 0-2.882-.694-5.54-2.08-7.975z" opacity=".6"></path>
+            </svg>
+          </a>
+        </div>
+        <a class="clutch-link" href="https://clutch.co/profile/software-brothers">
+          <picture>
+            <source srcset="https://softwarebrothers.co/assets/images/contact/icon-clutch.webp?v=1598821200" type="image/webp">
+            <source srcset="https://softwarebrothers.co/assets/images/contact/icon-clutch.png?v=1598821200" type="image/png">
+            <img src="./doc_files/icon-clutch.png">
+          </picture>
+        </a>
+      </div>
+    </div>
+    <div class="copyright-row">
+      <p class="text-caption copyright-text">© Software Brothers 2019. All rights reserved.</p>
+      <div class="privacy-terms">
+        <a class="text-caption" href="https://softwarebrothers.co/privacy-policy">Privacy Policy</a>
+        <a class="text-caption" href="https://softwarebrothers.co/terms-of-use">Terms of use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script>
+    var i=new Image;i.onload=i.onerror=function(){document.body.classList.add(i.height?"webp":"no-webp")};i.src="data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+  </script>
+
+
+<script type="text/javascript" id="">function getSelectionText(){var a="";window.getSelection?a=window.getSelection().toString():document.selection&&"Control"!=document.selection.type&&(a=document.selection.createRange().text);return a}document.addEventListener("copy",function(a){a=getSelectionText();(a.match(/[+48]?[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}/)||a.match(/^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/))&&dataLayer.push({event:"kopiowanie",skopiowanyTekst:getSelectionText()})});</script>
+<script type="text/javascript" id="">window.onload=function(){document.querySelector("#intercom-container \x3e div \x3e iframe.intercom-launcher-frame.intercom-launcher-frame-shadow")&&document.querySelector("#intercom-container \x3e div \x3e iframe.intercom-launcher-frame.intercom-launcher-frame-shadow").contentWindow.document.querySelector("#intercom-container \x3e div \x3e div \x3e div.intercom-launcher-close-icon")&&(document.querySelector("#intercom-container \x3e div \x3e iframe.intercom-launcher-frame.intercom-launcher-frame-shadow").contentWindow.document.querySelector("#intercom-container \x3e div \x3e div \x3e div.intercom-launcher-close-icon").onclick=
+function(){null==document.querySelector("#intercom-container \x3e div \x3e iframe.intercom-launcher-frame.intercom-launcher-frame-shadow").contentWindow.document.querySelector("#intercom-container \x3e div \x3e div.intercom-launcher.intercom-launcher-active")?(dataLayer.push({event:"otwarcie czatu"}),setTimeout(function(){document.querySelector("#intercom-container \x3e div \x3e div:nth-child(1) \x3e div \x3e iframe").contentWindow.document.querySelector("#intercom-container \x3e div \x3e div \x3e div.intercom-messenger.intercom-messenger-home-screen \x3e div.intercom-messenger-body \x3e div \x3e div \x3e div \x3e div \x3e div.intercom-home-screen-card.intercom-home-screen-conversation-card \x3e div \x3e span \x3e div \x3e div \x3e div.intercom-home-screen-conversations-footer \x3e button").onclick=
+function(){dataLayer.push({event:"nowa konwersacja"})}},1500)):dataLayer.push({event:"zamkni\u0119cie czatu"})})};</script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","369943483851449");fbq("track","PageView");fbq("track","Contact");</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=369943483851449&amp;ev=PageView
+&amp;noscript=1">
+</noscript>
+<script type="text/javascript" id="">(function(){function b(a){dataLayer.push({event:"scroll",poziomScrollowania:"Poziom scrolowania \x3e\x3d :"+a+"%"})}try{var c=0,d=0,e=jQuery(document),f=jQuery(window);f.on("scroll",function(){var a=parseInt(100*e.scrollTop()/(e.height()-f.height()));50<=a&&0==c&&(c=1,b(50));75<=a&&0==d&&(d=1,b(75))})}catch(a){console.error("Wyst\u0105pi\u0142 b\u0142\u0105d: "+a.message)}})();</script>
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+
+<script type="text/javascript" id="">fbq("track","Blog Category - documentation");</script>
+<iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./doc_files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe style="display: none;" src="./doc_files/saved_resource(2).html"></iframe><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom" src="./doc_files/saved_resource(3).html"></iframe><div class="intercom-lightweight-app" aria-live="polite"><style id="intercom-lightweight-app-style" type="text/css">
+  @keyframes intercom-lightweight-app-launcher {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intercom-lightweight-app-gradient {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intercom-lightweight-app-messenger {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .intercom-lightweight-app {
+    position: fixed;
+    z-index: 2147483001;
+    width: 0;
+    height: 0;
+    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  }
+
+  .intercom-lightweight-app-gradient {
+    position: fixed;
+    z-index: 2147483002;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(29, 39, 54, 0.16) 0%,
+      rgba(29, 39, 54, 0) 72%);
+    animation: intercom-lightweight-app-gradient 200ms ease-out;
+  }
+
+  .intercom-lightweight-app-launcher {
+    position: fixed;
+    z-index: 2147483003;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #E6525A;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+    animation: intercom-lightweight-app-launcher 250ms ease;
+  }
+
+  .intercom-lightweight-app-launcher:focus {
+    outline: none;
+    
+  }
+
+  .intercom-lightweight-app-launcher-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    transition: transform 100ms linear, opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg {
+    width: 28px;
+    height: 32px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg {
+    height: 56px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-custom-icon-open {
+    max-height: 36px;
+    max-width: 36px;
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize {
+    
+        opacity: 0;
+        transform: rotate(-60deg) scale(0);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg {
+    width: 16px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-messenger {
+    position: fixed;
+    z-index: 2147483003;
+    overflow: hidden;
+    background-color: white;
+    animation: intercom-lightweight-app-messenger 250ms ease-out;
+    
+        width: 376px;
+        height: calc(100% - 120px);
+        max-height: 704px;
+        min-height: 250px;
+        right: 20px;
+        bottom: 100px;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
+        border-radius: 8px;
+      
+  }
+
+  .intercom-lightweight-app-messenger-header {
+    height: 75px;
+    background: linear-gradient(
+      135deg,
+      rgb(230, 82, 90) 0%,
+      rgb(183, 27, 35) 100%
+    );
+  }
+
+  @media print {
+    .intercom-lightweight-app {
+      display: none;
+    }
+  }
+</style><div class="intercom-lightweight-app-launcher intercom-launcher" role="button" tabindex="0" aria-label="Open Intercom Messenger"><div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32"><path d="M28 32s-4.714-1.855-8.527-3.34H3.437C1.54 28.66 0 27.026 0 25.013V3.644C0 1.633 1.54 0 3.437 0h21.125c1.898 0 3.437 1.632 3.437 3.645v18.404H28V32zm-4.139-11.982a.88.88 0 00-1.292-.105c-.03.026-3.015 2.681-8.57 2.681-5.486 0-8.517-2.636-8.571-2.684a.88.88 0 00-1.29.107 1.01 1.01 0 00-.219.708.992.992 0 00.318.664c.142.128 3.537 3.15 9.762 3.15 6.226 0 9.621-3.022 9.763-3.15a.992.992 0 00.317-.664 1.01 1.01 0 00-.218-.707z"></path></svg></div><div class="intercom-lightweight-app-launcher-icon intercom-lightweight-app-launcher-icon-minimize"><svg viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.116 4.884l1.768-1.768L8 9.232l6.116-6.116 1.768 1.768L8 12.768.116 4.884z"></path></svg></div></div></div></body></html>
