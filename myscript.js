@@ -1,5 +1,4 @@
-<script language="JavaScript">
-<!--
+
 function calculateBmi() {
 var weight = document.bmiForm.weight.value
 var height = document.bmiForm.height.value
@@ -20,5 +19,3 @@ else{
 alert("wrong info was inserted")
 }
 }
-//-->
-</script>
