@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  
+<h2>Converter: Binary to base 10</h2>
+<p> an example of how it works</p>
+<img id="myImage" src="binary1.jpg" style="width:300px">
+<p>Enter any number in base 2(1,0):</p>
+<p><input type="number" id="inputBin" value=""></p>
+
+
+<button onclick="binToDec()">Submit</button>
+
+<p>Base 10: </p>
+<p id="demo"></p>
+
+<script>
+function binToDec() {
+  var x = document.getElementById("inputBin").value;
+  var decOut = parseInt(x , 2).toString(10).toUpperCase();
+  document.getElementById("demo").innerHTML = decOut;
+  }
+</script>
+
+
+
+</section>
+
+
+
+
+<h2>Binary Addition</h2>
+<img id="myImage" src="addition.jpg" style="width:300px"></p>
+</body>
+</html>
+
+
+
+
+<
